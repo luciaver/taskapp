@@ -3,21 +3,21 @@ import { createTask, addTask, toggleTask, removeTask, getStats } from './tasks.j
 let tasks = [];
 
 // ---- Elementos del DOM ----
-const form      = document.getElementById('task-form');
-const input     = document.getElementById('task-input');
-const listEl    = document.getElementById('task-list');
-const emptyMsg  = document.getElementById('empty-msg');
-const totalEl   = document.getElementById('total-count');
-const doneEl    = document.getElementById('done-count');
+const form = document.getElementById('task-form');
+const input = document.getElementById('task-input');
+const listEl = document.getElementById('task-list');
+const emptyMsg = document.getElementById('empty-msg');
+const totalEl = document.getElementById('total-count');
+const doneEl = document.getElementById('done-count');
 const pendingEl = document.getElementById('pending-count');
 
 // ---- Renderizado ----
 function render() {
   // Estadísticas
   const stats = getStats(tasks);
-  totalEl.textContent    = `Total: ${stats.total}`;
-  doneEl.textContent     = `Completadas: ${stats.done}`;
-  pendingEl.textContent  = `Pendientes: ${stats.pending}`;
+  totalEl.textContent = `Total: ${stats.total}`;
+  doneEl.textContent = `Completadas: ${stats.done}`;
+  pendingEl.textContent = `Pendientes: ${stats.pending}`;
 
   // Mensaje vacío
   emptyMsg.classList.toggle('hidden', tasks.length > 0);

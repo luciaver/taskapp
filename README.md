@@ -52,3 +52,7 @@ npm run test
 # Modo watch (re-ejecuta al guardar)
 npm run test:watch
 ```
+echo "." >> README.md
+git add .
+git commit -m "trigger workflow"
+git push origin main
